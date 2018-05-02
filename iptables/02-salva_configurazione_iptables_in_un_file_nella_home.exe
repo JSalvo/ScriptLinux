@@ -1,0 +1,1 @@
+sudo iptables-save > ~/salvataggio_configurazione_iptables.conf

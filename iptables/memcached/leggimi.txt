@@ -1,0 +1,2 @@
+Il servizio memcached, può essere utilizzato per un hacking del server.
+Impedire tramite firewall, l'accesso al servizio "dall'esterno", tramite il blocco della porta 11211.
