@@ -1,0 +1,18 @@
+Supponendo che sia presente un file di configurazione in etc (/etc/iptables.rules), modificare il file
+
+/etc/network/interfaces
+
+per caricare tale configurazione all'attivazione dell'interfaccia. Inserire una delle due seguenti regole
+all'interno della sezione di configurazione dell'interfaccia di interesse:
+
+pre-up iptables-restore < /etc/iptables.rules
+
+oppure
+
+post-up itables-restore < /etc/iptables.rules
+
+Non sono certo, ma credo che la differenza tra il pre-up e il post-up sia che, in un caso, la regola venga eseguita
+appena prima dell'attivazione dell'interfaccia, nel secondo caso appena dopo. In pratica con il post-up, potrebbe
+esserci un minimo intervallo in cui gli effetti della regola non sono ancora presenti e quindi un potenziale intervallo di vulnerabilità.
+Nel pre-up, questo potenziale intervallo non dovrebbe esserci.
+ 
