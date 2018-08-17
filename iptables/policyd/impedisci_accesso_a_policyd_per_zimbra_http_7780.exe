@@ -1,0 +1,3 @@
+iptables -I INPUT -p udp --dport 11211 -j REJECT 
+iptables -I INPUT -p tcp --dport 7780 -j REJECT 
+iptables -I INPUT -p tcp -s 127.0.0.1 --dport 7780 -j ACCEPT
