@@ -16,3 +16,10 @@ appena prima dell'attivazione dell'interfaccia, nel secondo caso appena dopo. In
 esserci un minimo intervallo in cui gli effetti della regola non sono ancora presenti e quindi un potenziale intervallo di vulnerabilità.
 Nel pre-up, questo potenziale intervallo non dovrebbe esserci.
  
+Aggiornamento:
+Sembra che sia meglio mettere l'istruzione
+
+iptables-restore < /etc/iptables.rules
+
+nel file: /etc/rc.local
+
